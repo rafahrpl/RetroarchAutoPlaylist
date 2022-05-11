@@ -1,6 +1,5 @@
 1.0
-    COMMON: Created button to upload original list, filter to and compare and include ogirinal crc on final list
-    COMMON: Make validation on form
+    COMMON: Make form validation
     LOCALIZATION: Translate to "pt-BR"
     GUI: Switch button to "pt-BR"
     GUI: Port site to boostrap 4
@@ -23,11 +22,10 @@
 
 (REMOVE ON FINAL)No Changelog(REMOVE ON FINAL)
  TO VERSION 1.0
-    01.0 - Created button to upload original list, filter to and compare and include ogirinal crc on final list
     01.1 - CHROME: Switch SVG's files to tag <object> to run SVG's locally on Chrome
     01.2 - Colocar Pattern js que desabilita button(submit) se tiver sme arquivos ou "path" tiver com menos
            de 15 caracteres ou com espaço
-    02.1 - Make validation on form
+    02.1 - Make form validation
     02.2 - Traduzir comentários
     03 - Test site in BR e Traduza a lógica
     04 - Traduzir bottão choose files e colocar <script> no <head>

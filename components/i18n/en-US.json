@@ -1,9 +1,9 @@
 {
 "title":"List generator roms for Retroarch",
-"navh2":"List generator roms for Retroarch 1.7.7 or more",
+"navh2":"List generator roms for Retroarch",
 "langSwitch":"EN-US",
 "instructions":"Instructions",
-"instructParag":"*Note: When using the script it will be possible to make RetroArch find modified files (hacked or mostly translated), but there will be no image support, because the crc code of modified roms differ from the original rom. <br> Select the emulator and confirm, after opening the file dialog, select the roms you will use and confirm, shortly after entering the full path of the output folder roms to Retroarch will stay, and download the generated lpl file.<br>Optional: To view images or play with network rom, include the original playlist so that the application replaces roms that have crc in the final file.",
+"instructParag":"*Note: When using the script it will be possible to make RetroArch find modified files (translated or hacked), but there will be no image support, because the crc code of modified roms differ from the original rom. <br> Select the emulator and confirm, after opening the file dialog, select the roms you will use and confirm, shortly after entering the full path of the output folder roms to Retroarch will stay, and download the generated lpl file.",
 "selectConsoleh3":"1º Select the console below to generate the file:",
 "consoleName":"Select the console bellow:",
 "selectRomsh3":"2º Select the roms you will use and confirm!",

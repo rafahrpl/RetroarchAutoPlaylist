@@ -1,0 +1,158 @@
+<!--
+  Manual List Generator.
+  Copyright (C) 2019 - Raphael Alves
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Raphael A."/>
+    <title id="title">List generator roms for Retroarch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="List Generator lpl to RetroArch">
+  	<link rel="icon" href="favicon.png" sizes="32x32" type="image/png"/>
+    <link rel="stylesheet" href="./frontend/css/reset.css">
+    <link rel="stylesheet" href="./frontend/css/fonts.css">
+    <link rel="stylesheet" href="./frontend/css/default.css">
+    <link rel="stylesheet" href="./frontend/cssBootstrap/bootstrap.min.css">
+    <!-- Translate -->
+    <script src="./components/i18n/lang.js"></script>
+    <!-- Boostrap Source -->
+    <script src="./components/js/jquery-3.4.1.min.js"></script>
+    <script src="./components/jsBootstrap/bootstrap.min.js"></script>
+    <!-- Source -->
+    <script src="./components/js/mainFunction.js"></script>
+    <script src="./components/js/downloadTextFile.js"></script>
+  </head>
+  <body class="d-flex flex-column" onload="onLoadReset()">
+    <nav class="d-flex nav">
+      <span class="container d-flex">
+        <h2 id="navh2" class="text-white">List generator roms for Retroarch</h2>
+        <section class="d-flex ml-auto flex-column">
+          <label class="switch">
+            <input id="langCheckbox" type="checkbox">
+            <span class="slider" onclick="langFunction()"></span>
+          </label>
+          <div id="langSwitch" class="item text-center">EN-US</div>
+        </section>
+      </span>
+    </nav>
+
+    <div class="container container-fluid">
+      <hr id="hrnav">
+      <div class="card text-white">
+        <div class="card-body buttonBlue">
+          <h3 id="instructions">Instructions</h3>
+          <p id="instructParag" class="text-justify">*Note: When using the script it will be possible to make RetroArch find modified
+            files (translated or hacked), but there will be no image support, because the crc code
+            of modified roms differ from the original rom. <br>
+            Select the emulator and confirm, after opening the file dialog, select the roms you will use and confirm, shortly after
+            entering the full path of the output folder roms to Retroarch will stay, and download the generated lpl file.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Create of box horizontal align with other box included vertical aligned(flex-column) -->
+    <div class="d-flex justify-content-center pb-4">
+      <div class="align-items-start flex-column">
+        <form id="form" class="" action="" method="">
+          <h3 id="selectConsoleh3" class="mt-4">1º Select the console below to generate the file:</h3>
+          <select name="consoleName" id="consoleName" class="custom-select custom-select-lg col-sm-12 col-md-8 col-lg-8 col-xl-8" required autofocus>
+            <option>Select the console bellow:</option>
+            <!-- <option value="Microsoft - Xbox.lpl">Microsoft - Xbox</option> -->
+            <option value="Nintendo - Game Boy.lpl">Nintendo - Game Boy</option>
+            <option value="Nintendo - Game Boy Advance.lpl">Nintendo - Game Boy Advance</option>
+            <option value="Nintendo - Game Boy Color.lpl">Nintendo - Game Boy Color</option>
+            <option value="Nintendo - GameCube.lpl">Nintendo - GameCube</option>
+            <option value="Nintendo - Nintendo 3DS.lpl">Nintendo - Nintendo 3DS</option>
+            <option value="Nintendo - Nintendo 64.lpl">Nintendo - Nintendo 64</option>
+            <option value="Nintendo - Nintendo DS.lpl">Nintendo - Nintendo DS</option>
+            <option value="Nintendo - Nintendo Entertainment System.lpl">Nintendo - Nintendo Entertainment System</option>
+            <option value="Nintendo - Super Nintendo Entertainment System.lpl">Nintendo - Super Nintendo Entertainment System</option>
+            <option value="Nintendo - Wii.lpl">Nintendo - Wii</option>
+            <option value="Sega - Dreamcast.lpl">Sega - Dreamcast</option>
+            <option value="Sony - PlayStation.lpl">Sony - PlayStation</option>
+            <!-- <option value="Sony - PlayStation 2.lpl">Sony - PlayStation 2</option> -->
+            <option value="Sony - PlayStation Portable.lpl">Sony - PlayStation Portable</option>
+            <!-- <option value="Sony - PlayStation Vita.lpl">Sony - PlayStation Vita</option> -->
+          </select>
+
+          <h3 id="selectRomsh3" class="mt-4">2º Select the roms you will use and confirm!</h3>
+          <p id="selectRomsParag"><strong>Tip:</strong> Use the Ctrl or the Shift key to select multiple files.</p>
+          <!--  <input type="file" name="romsNames" id="romsNames" multiple accept="" onclick="extDefine()">  -->
+
+          <div class="box">
+            <input type="file" name="romsNames" id="romsNames" class="inputfile inputfile-1" accept="" onclick="extDefine()" data-multiple-caption="{count} Files selected" multiple disabled />
+            <label for="romsNames">
+              <!-- <use> shape defined to external svg -->
+              <svg viewBox="0 0 497 497" width="100" height="100">
+                 <use href="./frontend/images/textFiles.svg#textFiles"></use>
+              </svg>
+              <span id="filesChoose">Choose a files&hellip;</span>
+            </label>
+          </div>
+          <p id="textNamesError" style="display: none"></p>
+
+          <h3 id="inputPathText" class="mt-4">3º Enter the full path of the roms folder with slash at the end:</h3>
+          <!-- Opcional: Mude o caminho para usar em outros sistemas, e utilize barra no final. -->
+          <span id="examples">Examples:</span>
+          <p>Lakka: /storage/roms/sdb2-ata-WDC_WD3200BEVT-7/Roms Super Nintendo/<br>
+          Linux: /home/user/Documents/ROMS/SNES/<br>
+          Windows: C://Users/guest/Documents/ROMS/SNES/</p>
+          <input type="text" name="inputPath" id="inputPath" placeholder="Folder Path.." class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8" pattern="^[^\s]{15,}$" required disabled /> <!-- ^[^\s] Allow any char that is not space  "." Accept any char    {15,}$ This regex is valid for any char 15 times or more. -->
+          <p id="textPathError" style="display: none"></p>
+
+          <!-- Button trigger modal -->
+          <button type="button" id="createList" class="mt-2 buttons buttonGreen col-sm-12 col-md-8 col-lg-8 col-xl-8" onclick="functionGroup()" data-toggle="modal" data-target="#exampleModal" disabled>
+            <div class="d-flex justify-content-center">
+              <div>
+                <span id="spanCreateList">Generate List<span>
+              </div>
+              <div class="mt-1 ml-2">
+                <object id="svgArrow" type="image/svg+xml" data="./frontend/images/arrows.svg"></object>
+              </div>
+            </div>
+          </button>
+        </form>
+
+        <!-- Modal code -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="labelModalDownload" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="labelModalDownload">Download File</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div id="modal-body" class="modal-body">
+                <p id="paragraph" style="display: none"></p>
+                <div type="button" id="downloadButton" class="buttonGreen" style="display: none">
+                  <a id="downloadLink"></a>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="closeModalDownload" class="buttons buttonRed" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./components/js/inputFilesExt.js"></script>
+  </body>
+</html>

@@ -157,95 +157,19 @@ function listGenerator() {
   } else {
     document.getElementById("textNamesError").innerHTML = "";
     document.getElementById("textPathError").innerHTML = "";
-    var i = 0, text = "", virgula = "", romName = [];      // Define variables
-    for (i = 0; i < rN.files.length; i++) {             // For function usage to define all array romName
+    var i, text = "", virgula = "", romAlpha = [];      // Define variables
+    for (i = 0; i < rN.files.length; i++) {             // For function usage to define all array romAlpha
       var name = rN.files.item(i).name;                 // Nome do arquivo completo
-      romName[i] = name;                               // Define array romName for use sort function
+      romAlpha[i] = name;                               // Define array romAlpha for use sort function
     }
-    //romName.sort();     --->>>     Sort an array alphabetically(error: don't sort numbers correctly/error: files with lower case will go to the end)
-    //romName.sort(function(a, b){return a-b});          // Sort an array alphabetically correctly numbers and lower case with capital letters
-    label="";
+    //romAlpha.sort();     --->>>     Sort an array alphabetically(error: don't sort numbers correctly/error: files with lower case will go to the end)
+    romAlpha.sort(function(a, b){return a-b});          // Sort an array alphabetically correctly numbers and lower case with capital letters
     for (i = 0; i < rN.files.length; i++) {
-      label[i] = romName[i].slice(0,-4);              // label -> mostra apenas o nome sem extensao / slice trunca 3 caracteres apartir da direita
-      text += virgula + "\n    {\n      \"path\": \"" + path + romName[i] + "\",\n      \"label\": \"" + label + "\",\n      \"core_path\": \"DETECT\",\n      \"core_name\": \"DETECT\",\n      \"crc32\": \"00000000|crc\",\n      " + "\"db_name\": \"" + consoleName + "\"\n    }";
+      var label = romAlpha[i].slice(0,-4);              // label -> mostra apenas o nome sem extensao / slice trunca 3 caracteres apartir da direita
+      text += virgula + "\n    {\n      \"path\": \"" + path + romAlpha[i] + "\",\n      \"label\": \"" + label + "\",\n      \"core_path\": \"DETECT\",\n      \"core_name\": \"DETECT\",\n      \"crc32\": \"00000000|crc\",\n      " + "\"db_name\": \"" + consoleName + "\"\n    }";
       var virgula = ",";                                // Impreess comma after first block
     }
     fullFile = "{\n  \"version\": \"1.0\",\n  \"items\": [" + text + "\n  ]\n}";  // fullFile set all text to variable
     error = 0;
   }
-
-
-(function(){
-
-    function onChange(event) {
-        var reader = new FileReader();
-        reader.onload = onReaderLoad;
-        reader.readAsText(event.target.files[0]);
-    }
-
-    function onReaderLoad(event){
-        console.log(event.target.result);
-        var obj = JSON.parse(event.target.result);
-        alert_data(obj.name, obj.family);
-    }
-
-    function alert_data(name, family){
-        alert('Name : ' + name + ', Family : ' + family);
-    }
-
-    document.getElementById('file').addEventListener('change', onChange);
-
-}());
-
-
-listOne = document.getElementById('listOne');
-console.log(listOne);
- //listOne = JSON.parse(listOne);
- listTwo = JSON.parse(fullFile);
-
-
-
-
-  var z = 0, text = "", virgula = "", listOneRomName = [];      // Define variables
-  listOneLabel = "";
-  for (z = 0; z < listOne.files.length; z++) {             // For function usage to define all array listOneRomName
-    var listOneName = listOne.files.item(z).name;                 // Nome do arquivo completo
-    listOneRomName[z] = listOneName;                               // Define array listOneRomName for use sort function
-    listOneLabel[z] = listOneRomName[z].slice(0,-4);
-  }
-  //listOneRomName.sort();     --->>>     Sort an array alphabetically(error: don't sort numbers correctly/error: files with lower case will go to the end)
-  //listOneRomName.sort(function(a, b){return a-b});          // Sort an array alphabetically correctly numbers and lower case with capital letters
-
-
-
-  if((listOne.version) === (listTwo.version)){
-    // length is number of lines
-    j = 0; k = 0;
-    var jlength = Object.keys(listOne.items).length;
-    var klength = Object.keys(listTwo.items).length;
-
-    //j is number of atual line
-    for (;k<klength;){
-      if (label[k] === listOneLabel[j]) {
-        listTwo.items[k].label = listOne.items[j].label;
-        listTwo.items[k].crc32 = listOne.items[j].crc32;
-        k++;
-        j = 0;
-        console.log(listTwo.items[k].path);
-        console.log("2IF");
-      } else {
-        j++;
-        if (j === jlength) {
-          k++;
-          j = 0;
-        }
-      }
-      console.log(j,listOneLabel[j]);
-      //console.log(listTwo.items[k].path === listOne.items[j].path);
-    }
-  }
-
-
-
-
 }
