@@ -1,0 +1,22 @@
+{
+"title":"Gerador de lista roms para Retroarch",
+"navh2":"Gerador de lista roms para Retroarch 1.7.7 ou mais",
+"langSwitch":"PT-BR",
+"instructions":"Instruções",
+"instructParag":"*Observação: Ao usar o script será possível fazer RetroArch encontrar arquivos modificados (hackeado ou principalmente traduzido), mas não haverá suporte de imagens, pois o código crc de roms modificadas diferem da rom original. <br> Selecione o emulador e confirme, após abrir o diálogo de arquivos, selecione as roms que irá utilizar e confirme, logo após insira o caminho completo da pasta de saída roms para o Retroarch irão ficar, e baixe o arquivo lpl gerado.<br>Opcional: Para ver imagens ou jogar com a rom em rede, inclua a playlist original para que o aplicativo substitua as roms que possuam crc no arquivo final.",
+"selectConsoleh3":"1º Selecione o console para geração do arquivo abaixo:",
+"consoleName":"Selecione o console abaixo:",
+"selectRomsh3":"2º Selecione as roms que irá utilizar e confirme!",
+"selectRomsParag":"<strong>Dica:</strong> Use o Ctrl ou a tecla Shift para selecionar vários arquivos.",
+"romsNamesSm":"{count} Arquivo selecionado",
+"romsNamesPl":"{count} Arquivos selecionados",
+"filesChoose":"Selecione os arquivos&hellip;",
+"textNamesError":"abcde",
+"inputPathText":"3º Insira o caminho completo da pasta de roms com barra no final:",
+"examples":"Exemplos:",
+"inputPath":"Caminho da pasta..",
+"textPathError":"abcde",
+"spanCreateList":"Gerar Lista",
+"labelModalDownload":"Download do Arquivo",
+"closeModalDownload":"Fechar"
+}

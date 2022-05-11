@@ -1,0 +1,269 @@
+/*  Manual List Generator.
+ *  Copyright (C) 2019 - Raphael Alves
+ *
+ *  This program is free software: you can redistribute it and/or modify it under the terms
+ *  of the GNU General Public License as published by the Free Software Found-
+ *  ation, either version 3 of the License, or (at your option) any later version.
+ *
+ *  RetroArch is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ *  without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ *  PURPOSE.  See the GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along with RetroArch.
+ *  If not, see <http://www.gnu.org/licenses/>.
+*/
+body{
+    background-color: hsla(210, 25%, 98%, 1);
+}
+
+.nav{
+  background-color: hsla(122, 39%, 49%, 1);
+  padding: 10px;
+  padding-top: 20px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsla(0, 0%, 80%, 1);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#langSwitch{
+  margin-top: -5px;
+  color: hsla(0, 0%, 85%, 1);
+}
+
+
+input:checked + .slider {
+  background-color: hsla(207, 90%, 54%, 1); /* DodgerBlue */
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px hsla(207, 90%, 54%, 1);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+#hrnav {
+  border: 0.1rem solid hsla(0, 0%, 80%, 1);
+}
+
+/*
+select:not([multiple]){};
+select {
+  width: 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  border-radius: 2px;
+  background-color: #f1f1f1;
+  background-position: right 50%;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDZFNDEwNjlGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDZFNDEwNkFGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NkU0MTA2N0Y3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NkU0MTA2OEY3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuGsgwQAAAA5SURBVHjaYvz//z8DOYCJgUxAf42MQIzTk0D/M+KzkRGPoQSdykiKJrBGpOhgJFYTWNEIiEeAAAMAzNENEOH+do8AAAAASUVORK5CYII=);
+  padding: .5em;
+  padding-right: 1.5em
+}
+select[id=consoleName]:focus{};
+select:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 .2rem hsla(216, 100%, 56%, 0.25);
+}
+*/
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    max-width: 80%;
+    font-size: 1.1rem; /* 1.1rem < 20px */
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+}
+
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+    outline: 1px dotted hsla(0, 0%, 0%, 1); /* Black */
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + label * {
+    /* pointer-events: none; */
+    /* in case of FastClick lib use */
+}
+
+.inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em; /* 4px */
+    margin-right: 0.25em; /* 4px */
+}
+
+/* style 1 */
+.inputfile-1 + label {
+    color: hsla(0, 100%, 100%, 1);
+    background-color: hsla(210, 100%, 56%, 1);
+}
+
+.inputfile-1:focus + label,
+.inputfile-1.has-focus + label,
+.inputfile-1 + label:hover {
+    background-color: hsla(225, 73%, 57%, 1);
+    /* hsla(211, 100%, 38%, 1); */
+}
+
+#inputPath {
+  background-image: url('../images/pathroad.png');
+}
+input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid hsla(0, 0%, 80%, 1);
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-size: 30px 30px;
+  opacity: 0.6;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 50px;
+}
+input[type=text]:focus {
+  color: hsla(210, 9%, 31%, 1);
+  background-color: hsla(0, 100%, 100%, 1); /* White */
+  border-color: hsla(211, 100%, 75%, 1);
+  outline: 0;
+  box-shadow: 0 0 0 .2rem hsla(216, 100%, 56%, 0.25);
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: hsla(122, 39%, 49%, 1);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+
+
+#svgArrow{
+  height: 1.2rem;
+  width: 1.2rem;
+   /* fill: hsla(0, 100%, 100%, 1);*/  /* Line on SVG file */;
+}
+
+.buttons{
+  color: hsla(0, 100%, 100%, 1); /* White */
+  box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.2), 0 6px 20px 0 hsla(0, 0%, 0%, 0.19);
+  /* box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.6); */
+  padding: 10px 15px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.1rem; /* 1.1 < 20px */
+  font-weight: 700;
+  transition-duration: 0.4s;
+}
+.buttonGreen {
+  background-color: hsla(122, 50%, 49%, 1);
+  border-color: hsla(122, 39%, 49%, 1);
+}
+.buttonGreen:hover {
+  background-color: hsla(122, 62%, 45%, 1);
+  border-color: hsla(122, 56%, 49%, 1);
+}
+.buttonBlue {
+  background-color: hsla(210, 100%, 56%, 1);
+  /* background-color: hsla(195, 100%, 36%, 1); */
+  border-color: hsla(195, 100%, 36%, 1);
+}
+.buttonRed {
+  background-color: hsla(4, 90%, 58%, 1);
+  border-color: hsla(4, 90%, 58%, 1);
+}
+.buttonGrey {
+  background-color: hsla(0, 0%, 91%, 1);
+  border-color: hsla(0, 0%, 91%, 1);
+}
+.buttonBlack {
+  background-color: hsla(0, 0%, 33%, 1);
+  border-color: hsla(0, 0%, 33%, 1);
+}
+.buttonGreen[disabled] {
+  background-color: hsla(122, 35%, 54%, 1);
+  border-color: hsla(122, 35%, 54%, 1);
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+
+#downloadButton a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: hsla(0, 100%, 100%, 1); /* White */
+  box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.2), 0 6px 20px 0 hsla(0, 0%, 0%, 0.19);
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 16px;
+}
+
+#downloadLink{
+  text-decoration-line: none;
+  color: hsla(0, 100%, 100%, 1); /* White */
+}
+#downloadLink:hover{
+  text-decoration-line: none;
+  color: hsla(0, 100%, 100%, 1); /* White */
+}
+
+/* color: #d3394c; */

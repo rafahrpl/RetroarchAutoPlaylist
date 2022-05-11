@@ -1,0 +1,309 @@
+{
+  "version": "1.0",
+  "items": [
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Adventures of Batman & Robin.smc",
+      "label": "Adventures of Batman & Robin, The (USA)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "B3EF81F5|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Yogi Bear.smc",
+      "label": "Adventures of Yogi Bear (USA)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "7448D45C|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Batman.smc",
+      "label": "Batman (USA) (Proto) [b]",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "9BAE4220|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Batman Forever.smc",
+      "label": "Batman Forever (Europe)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "6288D8ED|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Bonkers.smc",
+      "label": "Bonkers (USA)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "597AA981|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Cool Spot.smc",
+      "label": "Cool Spot (Europe)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "281244B0|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Donald Duck - Maui Mallard.smc",
+      "label": "Donald in Maui Mallard (Europe)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "D56C21A1|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Donkey Kong Country 2 - Diddy's Kong Quest.smc",
+      "label": "Donkey Kong Country 2 - Diddy's Kong Quest (Europe) (En,Fr) (Rev 1)",
+      "core_path": "/home/master/.var/app/org.libretro.RetroArch/config/retroarch/cores/snes9x_libretro.so",
+      "core_name": "Nintendo - SNES / Famicom (Snes9x)",
+      "crc32": "2EA6B7E8|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Doraemon 2 - Nobita no Toys Land Daibouken.smc",
+      "label": "Doraemon 2 - Nobita no Toys Land Daibouken (Japan)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "D343B398|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Dragon Slayer - Eiyuu Densetsu I (Japan).sfc",
+      "label": "Dragon Slayer - Eiyuu Densetsu (Japan)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "70BBA233|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Dragon Slayer - Eiyuu Densetsu II (Japan).sfc",
+      "label": "Dragon Slayer - Eiyuu Densetsu II (Japan)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "F409C139|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Earthbound (U) [!].smc",
+      "label": "EarthBound (USA)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "DC9BB451|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Fatal Fury 1.smc",
+      "label": "Fatal Fury (USA)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "C67257D0|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Fatal Fury 2.sfc",
+      "label": "Fatal Fury 2 (USA)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "A26EBFEF|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Final Fight 3.smc",
+      "label": "Final Fight 3 (Europe)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "AA58A166|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/The Flintstones.smc",
+      "label": "Flintstones, The (Europe) (En,Fr,De,Es,It) (Beta)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "15143605|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Incantation (USA).sfc",
+      "label": "Incantation (USA)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "D0FF7E9F|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Indiana Jones' Greatest Adventures.smc",
+      "label": "Indiana Jones' Greatest Adventures (Europe)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "FA4560C3|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Inspector Gadget (U).smc",
+      "label": "Inspector Gadget (USA)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "4CE2B818|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Joe & Mac 2 - Lost in the Tropics.smc",
+      "label": "Joe & Mac 2 - Lost in the Tropics (USA)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "0C3B4201|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Joe & Mac 3 - Lost in the Tropics.smc",
+      "label": "Joe & Mac 3 - Lost in the Tropics (Europe) (En,Fr,De)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "B9D6269D|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/King Arthur's World (USA).sfc",
+      "label": "King Arthur's World (USA)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "99BD1FE1|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Mickey Magical Quest Starring.smc",
+      "label": "Magical Quest Starring Mickey Mouse, The (USA)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "10874C70|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Marvel Super Heroes - War of the Gems.smc",
+      "label": "Marvel Super Heroes in War of the Gems (USA)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "00AF56E8|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/The Mask.smc",
+      "label": "Mask, The (USA) (Beta)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "CF727F64|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Mickey Mania.smc",
+      "label": "Mickey Mania (Europe)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "75FDDF27|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Mickey's Playtown Adventure - A Day of Discovery !.smc",
+      "label": "Mickey's Playtown Adventure - A Day of Discovery! (USA) (Proto)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "53524952|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Mickey's Ultimate Challenge.smc",
+      "label": "Mickey's Ultimate Challenge (USA)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "D6C60A84|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Mr Nutz (USA) (En,Fr).sfc",
+      "label": "Mr. Nutz (USA) (En,Fr)",
+      "core_path": "/home/master/.var/app/org.libretro.RetroArch/config/retroarch/cores/snes9x_libretro.so",
+      "core_name": "Nintendo - SNES / Famicom (Snes9x)",
+      "crc32": "A99BDD9A|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Royal Conquest (Japan).sfc",
+      "label": "Royal Conquest (Japan) (En)",
+      "core_path": "/home/master/.var/app/org.libretro.RetroArch/config/retroarch/cores/snes9x_libretro.so",
+      "core_name": "Nintendo - SNES / Famicom (Snes9x)",
+      "crc32": "F60E933E|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Secret of Mana (U) [!].smc",
+      "label": "Secret of Mana (USA)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "D0176B24|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Slayers (J).smc",
+      "label": "Slayers (Japan)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "0B610445|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Snoopy Concert (J).smc",
+      "label": "Snoopy Concert (Japan)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "3836A202|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Super Bomberman 5 (J).smc",
+      "label": "Super Bomber Man 5 (Japan) (Caravan Event Ban)",
+      "core_path": "/home/master/.var/app/org.libretro.RetroArch/config/retroarch/cores/snes9x_libretro.so",
+      "core_name": "Nintendo - SNES / Famicom (Snes9x)",
+      "crc32": "4590AE9D|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Downloads/Super Bomberman 3 (Europe)/Super Bomberman 3 (Europe).sfc",
+      "label": "Super Bomberman 3 (Europe)",
+      "core_path": "/home/master/.var/app/org.libretro.RetroArch/config/retroarch/cores/snes9x_libretro.so",
+      "core_name": "Nintendo - SNES / Famicom (Snes9x)",
+      "crc32": "A096A6E5|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Super Mario All-Stars.smc",
+      "label": "Super Mario All-Stars (Europe)",
+      "core_path": "/home/master/.var/app/org.libretro.RetroArch/config/retroarch/cores/snes9x_libretro.so",
+      "core_name": "Nintendo - SNES / Famicom (Snes9x)",
+      "crc32": "925FFA69|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Super Mario RPG - Legend of the Seven Stars.smc",
+      "label": "Super Mario RPG - Legend of the Seven Stars (USA)",
+      "core_path": "/home/master/.var/app/org.libretro.RetroArch/config/retroarch/cores/snes9x_libretro.so",
+      "core_name": "Nintendo - SNES / Famicom (Snes9x)",
+      "crc32": "1B8A0625|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    },
+    {
+      "path": "/home/master/Documentos/ROMS/Super Nintendo favoritos/Yoshi's Island.smc",
+      "label": "Super Mario World 2 - Yoshi's Island (Europe) (En,Fr,De)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "857980B2|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    }
+  ]
+}
